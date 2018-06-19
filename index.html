@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 </head>
-<link rel="stylesheet" href="./css/ft-carousel.css" />
 <style>
 body{
 	width: 100%;
@@ -60,11 +60,10 @@ body{
     height: 50px;
 }
 
-.grid li a span{ display:block; height:30px; line-height:30px;background-color:#FFF; color: #999; font-size:14px; }
+.grid li a span{ display:block; height:30px; line-height:30px; color: #999; font-size:14px; }
 .indexArticle{
 	width: 100%;
 	height: 900px;
-	background: linear-gradient(to bottom right, #f5f454, #fbd1b7);
 }
 .menu {
         display: block;
@@ -108,53 +107,19 @@ img {
 }
 </style>
 <body>
-	<!-- logo -->
-	<div class="header">
-		<img src="./img/logo.png" style="height: 100%">
-	</div>
-	<!-- 轮播图 -->
-	<div class="Carousel">
-		<div class="ft-carousel" id="carousel_1">
-			<ul class="carousel-inner">
-				<li class="carousel-item"><img src="./img/a1.jpg" /></li>
-				<li class="carousel-item"><img src="./img/a2.jpg" /></li>
-				<li class="carousel-item"><img src="./img/a3.jpg" /></li>
-				<li class="carousel-item"><img src="./img/a4.jpg" /></li>
-				<li class="carousel-item"><img src="./img/a5.jpg" /></li>
-				<li class="carousel-item"><img src="./img/a6.jpg" /></li>
-			</ul>
-		</div>
-	</div>
-	<div id="content">
-		<!-- 栏目 -->
-		<div class="indexCate">
-			<ul class="grid">
-		        <li><a href="./#" ><b><img src="./img/lab.png" /></b><span>实验室</span></a></li>
-		        <li><a href="./#" ><b><img src="./img/comments.png" /></b><span>已选职位</span></a></li>
-		        <li><a href="./#" ><b><img src="./img/myjob.png" /></b><span>我的经历</span></a></li>
-		        <li><a href="./#" ><b><img src="./img/info.png" /></b><span>个人信息</span></a></li>  
-    		</ul>
-		</div>
-
-		<!-- 首页文章详情 -->
-		<div class="indexArticle">
-			
-		</div>
-	</div>
-
-	<!-- 底部导航栏 -->
-	<div id="menu" class="menu">
-    <div id="one" class="subMenu text-center" data-src="js选择学校.html">
-        <img class="menu_img" data-imgname="index"/>
-        <div class="menu_name">首页</div>
+<div id="all">
+</div>
+    <!-- 底部导航栏 -->
+    <div id="menu" class="menu">
+        <div id="one" class="subMenu text-center" data-src="index2.html">
+            <img class="menu_img" data-imgname="index"/>
+            <div class="menu_name">首页</div>
+        </div>
+        <div id="three" class="subMenu text-center" data-src="my.html">
+            <img class="menu_img" data-imgname="info"/>
+            <div class="menu_name">我的</div>
+        </div>
     </div>
-    <div id="three" class="subMenu text-center" data-src="js选择学校.html">
-        <img class="menu_img" data-imgname="info"/>
-        <div class="menu_name">我的</div>
-    </div>
-	</div>
-
-
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/ft-carousel.min.js"></script>
@@ -207,7 +172,7 @@ img {
             //content根据点击按钮加载不同的html
             var page = $(this).attr("data-src");
             if(page){
-                $("#content").load(page)
+                $("#all").load(page)
             }
         });
 
