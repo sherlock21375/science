@@ -8,7 +8,9 @@
 	<meta name="”format-detection”" content="”telephone=no”">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" >
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="mainBox">
@@ -53,14 +55,38 @@
                 <div class="list-box d-list">
                 	<div class="clearfix"><em><img src="./img/ic4.png" width="21"></em><span>张老师</span></div>
                     <div class="clearfix"><em><img src="./img/ic5.png" width="21"></em><span>13113113113</span></div>
-                    <a href="javascript:void(0);" class="btn btn1"><img src="./img/ic6.png" width="46"></a>
+                    <a href="tel:13764567708" class="btn btn1"><img src="./img/ic6.png" width="46"></a>
                     <a href="javascript:void(0);" class="btn btn2"><img src="./img/ic7.png" width="46"></a>
                 </div>
                 <div class="list-box d-list">
                 	<p class="p">温馨提示：谨防一切要办卡交押金的兼职</p>
                     <p><span>举报方式：</span><em><img src="./img/ic8.png" width="24"></em><span>qinma2333</span></p>
                 </div>
-                
+                <div class="list-box d-list">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href='./info.html'">了解导师</button>
+                </div>
+                <div class="list-box d-list">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="return ww();">申请职位</button>
+                </div>
+                <script type="text/javascript">
+                    function ww(){
+                        $(successAlert).show();
+                    }
+                </script>
+                <div id="successAlert" class="alert alert-success alert-dismissable" style="position:fixed;top: 45%;display: none;">
+                    <button type="button" class="close" data-dismiss="alert"
+                            aria-hidden="true">
+                        &times;
+                    </button>
+                    申请成功！请期待老师的回复！
+                </div>
+                <!-- <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert"
+                            aria-hidden="true">
+                        &times;
+                    </button>
+                    错误！请进行一些更改。
+                </div> -->
             </div>
         </div>
         <!-- Add Scroll Bar -->
@@ -68,12 +94,10 @@
     </div>
 
     <!-- Swiper JS -->
-    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/swiper.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
-	
 	var navweight = $('.nav ul li').width();
 	
 	$('.nav ul li').height(navweight)
